@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6044248168437a100cbe3f1ded901fd4",
+    "content-hash": "5e65e34af56bc713e1d16ef169fbc51a",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -579,6 +579,67 @@
                 "source": "https://github.com/php-fig/log/tree/3.0.0"
             },
             "time": "2021-07-14T16:46:02+00:00"
+        },
+        {
+            "name": "sam-it/yii2-mariadb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SAM-IT/yii2-mariadb.git",
+                "reference": "f076f839bfe92ce63e7e40c7776dc0f16a5afb7a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SAM-IT/yii2-mariadb/zipball/f076f839bfe92ce63e7e40c7776dc0f16a5afb7a",
+                "reference": "f076f839bfe92ce63e7e40c7776dc0f16a5afb7a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "ext-pdo_mysql": "*",
+                "php": ">= 7.4",
+                "yiisoft/yii2": "> 2.0.14"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9",
+                "symplify/easy-coding-standard": "^10.3",
+                "yiisoft/yii2-dev": "^2"
+            },
+            "default-branch": true,
+            "type": "yii2-extension",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "echo committing as $(git config user.name)",
+                        "composer lint-fix",
+                        "composer test"
+                    ],
+                    "commit-msg": [
+                        "npx commitlint -e"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SamIT\\Yii2\\MariaDb\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Mousa",
+                    "email": "sam@mousa.nl"
+                }
+            ],
+            "description": "MariaDB Driver for Yii2",
+            "support": {
+                "issues": "https://github.com/SAM-IT/yii2-mariadb/issues",
+                "source": "https://github.com/SAM-IT/yii2-mariadb/tree/v3.1.1"
+            },
+            "time": "2022-06-13T15:29:30+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
